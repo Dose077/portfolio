@@ -11,10 +11,8 @@ const TAB_DATA =[
         id : 'skills',
         content:(
             <ul className='list-disc pl-2'>
-                <li>HTML,CSS,SASS,TAILWIND CSS,BOOTSTRAP</li>
-                <li>JAVA SCRIPT,REACT,REDUX</li>
-                <li>MUI/ANT DESIGN</li>
-                <li>NODE.JS,NEXT.JS,TYPE SCRIPT</li>
+                <li>BEM,CSS,SASS,TAILWIND CSS,BOOTSTRAP,MUI/ANT DESIGN</li>
+                <li>HTML,JAVA SCRIPT,REACT,REDUX,NODE.JS,NEXT.JS,TYPE SCRIPT</li>
             </ul>
         )
 
