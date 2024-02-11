@@ -4,6 +4,7 @@ import git from '../../../public/img/github.png'
 import lin from '../../../public/img/linkedin.svg'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Element } from 'react-scroll'
 
 const EmailSection = () => {
 
@@ -12,7 +13,7 @@ const EmailSection = () => {
         e.preventDefault()
     }
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
+    <Element name='contact'  className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
         <div className='bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-y-q/2'></div>
         <div className='z-10'>
             <h5 className='text-xl font-bold text-white my-2'>Let`s Connect </h5>
@@ -22,10 +23,10 @@ const EmailSection = () => {
             </p>
             <div className='socials flex flex-row gap-2'>
                 <Link href='https://github.com/Dose077'>
-                    <Image src={git} width={45} height={45} alt='Git hub icon'/>
+                    <Image src={git} className='bg-slate-200' width={50} height={50} alt='Git hub icon'/>
                 </Link> 
                  <Link href='/'>
-                    <Image src={lin} className='' alt='Linked In icon'/>
+                    <Image src={lin} className='bg-slate-200 ' alt='Linked In icon'/>
                 </Link>
             </div>
         </div>
@@ -84,7 +85,7 @@ const EmailSection = () => {
                 </button>
             </form>
         </div>
-    </section>
+    </Element>
   )
 }
 

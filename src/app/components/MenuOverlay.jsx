@@ -1,5 +1,8 @@
 import React from 'react'
-import NavLink from './NavLink'
+import { Link } from 'react-scroll'
+const handleSetActive = (to) => {
+  console.log(to);
+};
 
 const MenuOverlay = ({links}) => {
   return (
@@ -7,7 +10,19 @@ const MenuOverlay = ({links}) => {
     {links.map((link,index) =>(
         <li key={index}>
 
-            <NavLink href={link.path} title={link.title}/>
+            <Link 
+            activeClass="active" 
+            to={link.path}
+            spy={true} 
+            smooth={true} 
+            offset={-100} 
+            duration={500} 
+            onSetActive={handleSetActive} 
+            className='text-slate-200'
+            >
+              {link.title}
+
+              </Link>
         </li>
     ))}
    </ul>

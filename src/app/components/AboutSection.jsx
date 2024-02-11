@@ -3,6 +3,7 @@ import React, { useState, useTransition } from 'react'
 import Image from 'next/image'
 import laptop from '../../../public/img/laptop.jpg'
 import TabButton from './TabButton'
+import { Element } from 'react-scroll'
 
 const TAB_DATA =[
     {
@@ -10,18 +11,10 @@ const TAB_DATA =[
         id : 'skills',
         content:(
             <ul className='list-disc pl-2'>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SASS</li>
-                <li>TAILWIND CSS</li>
-                <li>BOOTSTRAP</li>
-                <li>JAVA SCRIPT</li>
-                <li>REACT</li>
-                <li>REDUX</li>
+                <li>HTML,CSS,SASS,TAILWIND CSS,BOOTSTRAP</li>
+                <li>JAVA SCRIPT,REACT,REDUX</li>
                 <li>MUI/ANT DESIGN</li>
-                <li>NODE.JS</li>
-                <li>NEXT.JS</li>
-                <li>TYPE SCRIPT</li>
+                <li>NODE.JS,NEXT.JS,TYPE SCRIPT</li>
             </ul>
         )
 
@@ -58,7 +51,7 @@ const AboutSection = () => {
         })
     }
   return (
-    <section className='text-white'>
+    <Element name='about' className='text-white'>
 <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
    <Image 
    alt=''
@@ -81,7 +74,7 @@ const AboutSection = () => {
         </div>
    </div>
 </div>
-    </section>
+    </Element>
   )
 }
 

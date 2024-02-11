@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react";
+import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 
@@ -45,7 +46,7 @@ const ProjectSection = () => {
     project.tag.includes(tag)
   )
   return (
-    <div>
+    <Element name="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4">My Project</h2>
       <div className="text-white flex flex-row  justify-center items-center gap-2 py-6">
         <ProjectTag onClick={handleTagChange} name='All' isSelected={tag === 'All'}/>
@@ -66,7 +67,7 @@ const ProjectSection = () => {
       ))}
       </div>
     
-    </div>
+    </Element>
   );
 };
 
